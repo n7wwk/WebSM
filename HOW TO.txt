@@ -1,0 +1,125 @@
+
+
+Web Incident Management System
+
+This is to help Amateur Radio Operators assist local agency's in the event of failure of normal communications. 
+I will support backup emergency communications, manage Incidents, assist in Shelter Operations. 
+Incident Management Shelter Management Maps Document's
+
+It will not log or record sheltered, persons other than just simple number of persons. Adults, Children, LEO, EMS, Pets.
+
+It will be web based to run on WAMP, LAMP servers. On Raspberry Pi, over Broadband Hamnet (BBHN) MESH NETWORK.
+It has been tested on Raspberry Pi 3 Configured with BBHN-Pi, with Apache2, Mysql, PHP.
+
+This application do not intend to be a professional one.
+But, if you agree with the open source license, 
+you can use for your work with no problem. 
+Consider keeping the credits to me!
+
+This application has only been tested locally, in my own machine.
+Tested with Xampp in Windows and Ubuntu Linux.
+
+
+HOW TO INSTALL
+==============================
+
+1. Create a Database with the file 'webims.sql';
+2. Upload this application to your web folder;
+3. Change the URL for this system in '/includes/config.php'
+
+    /* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'webims');
+
+4. Ready, try accessing 'http://your-url/WebSM'
+
+Maps Section
+============
+
+
+
+CONFIGURE SERVER FOR EMAIL AND SMS
+==================================
+How to enable IMAP in PHP
+
+How to Enable IMAP in XAMPP : –
+
+IMAP is not enabled by default in Xampp distribution, so to enable it go to the file “\xampp\php\php.ini” and search for “;extension=php_imap.dll” and by removing the beginning semicolon at the line ,it’s get enabled ,it should be: extension=php_imap.dll.
+
+How to Enable IMAP in Wampp : –
+
+1] \wamp\bin\apache\apache2.2.22\bin
+Enable php_imap.dll extension by removing ; at beginning of string
+
+To check/change your PHP mail configuration:
+
+   1. Open your php.ini file (if you don't know where this is, see below)
+   2. Search for the line that reads [mail function]
+   3. Add/change the details of your mail server. This could be a local mail server or the mail server of your ISP.
+   4. Save/close the php.ini file.
+   5. Restart your web server.
+
+in php.ini file find [mail function] and change
+
+SMTP=smtp.gmail.com
+smtp_port=587
+sendmail_from = my-gmail-id@gmail.com
+sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+
+Now Open C:\xampp\sendmail\sendmail.ini. Replace all the existing code in sendmail.ini with following code
+
+[sendmail]
+
+smtp_server=smtp.gmail.com
+smtp_port=587
+error_logfile=error.log
+debug_logfile=debug.log
+auth_username=my-gmail-id@gmail.com
+auth_password=my-gmail-password
+force_sender=my-gmail-id@gmail.com
+
+READ MESSAGES
+=============
+
+ Default login is admin/admin
+
+
+Administration Section 
+======================
+This area is restricted from the general user, and requires login. 
+User name and password is hard coded in: WebSM/Admin/index.php
+The default user name = admin, Password = w1nds0r
+
+In this section is used to Add, View, Change, Copy, or Delete Shelters. 
+
+You may also Add, View, Change, Copy, Delete The Status Types.
+
+
+
+
+
+
+CONTACT
+=======
+
+N7WWK Bob elder
+www.n7wwk.com
+
+
+
+CHANGELOG
+=========
+
+Version 1.0:
+    - First working!
+
+TODO:
+
+Configure Maps from online Google Maps to local mapping with out internet connection.
+
+
+
+
