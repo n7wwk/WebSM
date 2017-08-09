@@ -52,15 +52,15 @@ $mailBoxes = array(
 		'label' 	=> 'Gmail',
 		'enable'	=> true,
         'mailbox' 	=> '{imap.gmail.com:993/imap/ssl}INBOX',
-		'username' 	=> 'n7wwk1@gmail.com',
-		'password' 	=> '2Cnbj18c'
+		'username' 	=> 'username@gmail.com',
+		'password' 	=> 'password'
 	),
  array(
 		'label' 	=> '<ANOTHER E-MAIL>',
 		'enable'	=> false,
-		'mailbox' 	=> '{pop.n7wwk.com:110/notls}INBOX',
-		'username' 	=> 'rhawk@n7wwk.com',
-		'password' 	=> 'FL3917hj'
+		'mailbox' 	=> '{pop.othermail.com:110/notls}INBOX',
+		'username' 	=> 'user@othermail.com',
+		'password' 	=> 'password'
 	)
 );
 # Custom-fuctions
